@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta & SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Husain — Frontend Web Developer portfolio. HTML, CSS, JavaScript, React.js projects. Open to frontend internship opportunities."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, React Developer, Portfolio, HTML, CSS, JavaScript, Internship"
+    />
+    <meta name="author" content="Husain" />
+    <meta name="theme-color" content="#0d1117" />
+
+    <title>Husain | Frontend Developer Portfolio</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER / NAVIGATION -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="#home" class="logo" aria-label="Home">
+          <span class="logo-mark">HT</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary Navigation">
+          <ul class="nav-list" id="navList">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile menu toggle -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO / INTRO -->
+      <section id="home" class="hero">
+        <div class="container hero-wrapper">
+          <div class="hero-inner reveal">
+            <p class="eyebrow">Hi, my name is</p>
+            <h1 class="hero-title">Husain Tinwala</h1>
+            <h2 class="hero-subtitle">I build things for the web.</h2>
+            <p class="hero-desc">
+              I'm a frontend web developer specializing in building clean,
+              responsive, and accessible user interfaces with HTML, CSS,
+              JavaScript, and React. Currently looking for a
+              <strong>frontend internship</strong> opportunity.
+            </p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+            </div>
+          </div>
+          <img
+            src="assets/profile.jpg"
+            alt="Husain Tinwala"
+            class="hero-image reveal"
+          />
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">
+            <span class="section-num">01.</span> About Me
+          </h2>
+          <div class="about-grid reveal">
+            <div class="about-text">
+              <p>
+                Hello! I'm Husain Tinwala, a frontend developer who enjoys
+                turning ideas into pixel-perfect, functional web experiences. My
+                journey into web development started with a curiosity about how
+                websites work, and it quickly grew into a passion for crafting
+                clean interfaces.
+              </p>
+              <p>
+                I focus on writing maintainable code, building responsive
+                layouts, and keeping performance and accessibility in mind. I'm
+                currently sharpening my skills through personal projects and
+                seeking an internship to contribute to a real team.
+              </p>
+              <p>
+                Here are a few technologies I've been working with recently:
+              </p>
+              <ul class="about-tech">
+                <li>HTML5 &amp; CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js</li>
+                <li>Bootstrap 5</li>
+                <li>Responsive Design</li>
+                <li>Git &amp; GitHub</li>
+              </ul>
+            </div>
+            <div class="about-card">
+              <div class="about-card-inner">
+                <p class="about-stat"><span>2+</span> Projects Built</p>
+                <p class="about-stat"><span>5+</span> Core Technologies</p>
+                <p class="about-stat"><span>100%</span> Self-motivated</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <h2 class="section-title reveal">
+            <span class="section-num">02.</span> Skills
+          </h2>
+          <div class="skills-grid">
+            <div class="skill-card reveal">
+              <h3>HTML5</h3>
+              <p>Semantic markup &amp; accessibility fundamentals.</p>
+            </div>
+            <div class="skill-card reveal">
+              <h3>CSS3</h3>
+              <p>Flexbox, Grid, responsive design, animations.</p>
+            </div>
+            <div class="skill-card reveal">
+              <h3>JavaScript</h3>
+              <p>ES6+, DOM manipulation, async/await, fetch.</p>
+            </div>
+            <div class="skill-card reveal">
+              <h3>React.js</h3>
+              <p>Hooks, components, state, props, routing.</p>
+            </div>
+            <div class="skill-card reveal">
+              <h3>Bootstrap 5</h3>
+              <p>Grid system, utility classes, components.</p>
+            </div>
+            <div class="skill-card reveal">
+              <h3>Git &amp; GitHub</h3>
+              <p>Version control, branches, collaboration.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">
+            <span class="section-num">03.</span> Projects
+          </h2>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card reveal">
+              <div class="project-head">
+                <svg
+                  class="folder-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="project-title">Task Manager</h3>
+              <p class="project-desc">
+                Responsive task manager to add, delete, filter, and track tasks
+                with local state management.
+              </p>
+              <ul class="tech-list">
+                <li>React.js</li>
+                <li>Bootstrap 5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React Icons</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://task-manager-smoky-three-88.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/husain-tin-2003/task-manager"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm btn-ghost"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card reveal">
+              <div class="project-head">
+                <svg
+                  class="folder-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="project-title">Weather Dashboard</h3>
+              <p class="project-desc">
+                Real-time weather app showing current conditions for any city
+                with search and location detection.
+              </p>
+              <ul class="tech-list">
+                <li>React.js</li>
+                <li>Bootstrap 5</li>
+                <li>CSS3</li>
+                <li>JavaScript ES6+</li>
+                <li>OpenWeatherMap API</li>
+                <li>React Hooks</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://weather-dashboard-nine-swart.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/husain-tin-2003/weather-dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm btn-ghost"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card reveal">
+              <div class="project-head">
+                <svg
+                  class="folder-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="project-title">Portfolio Website</h3>
+              <p class="project-desc">
+                This portfolio website built with vanilla HTML/CSS/JS to
+                showcase my frontend projects.
+              </p>
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm" aria-disabled="true"
+                  >Live Demo</a
+                >
+                <a href="#" class="btn btn-sm btn-ghost" aria-disabled="true"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section section-alt">
+        <div class="container">
+          <h2 class="section-title reveal">
+            <span class="section-num">04.</span> Contact
+          </h2>
+          <p class="contact-lead reveal">
+            I'm currently open to internship opportunities. Feel free to reach
+            out — I'll get back to you as soon as possible.
+          </p>
+
+          <div class="contact-wrapper reveal">
+            <!-- Contact Info / Socials -->
+            <div class="contact-info">
+              <a href="mailto:hht7865253@gmail.com" class="contact-link">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>hht7865253@gmail.com</span>
+              </a>
+
+              <a
+                href="https://github.com/husain-tin-2003"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .31.21.68.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"
+                  />
+                </svg>
+                <span>github.com/husain-tin-2003</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/husain-tinwala-8055a8351/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.62 0 4.29 2.38 4.29 5.48v6.26zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"
+                  />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+                <small class="error-msg" id="nameError"></small>
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <small class="error-msg" id="emailError"></small>
+              </div>
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your message..."
+                  required
+                ></textarea>
+                <small class="error-msg" id="messageError"></small>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+              <p
+                class="form-success"
+                id="formSuccess"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Designed &amp; built by <strong>Husain Tinwala</strong></p>
+        <p class="muted">&copy; <span id="year"></span> All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
