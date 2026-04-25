@@ -241,7 +241,7 @@ svg {
   height: 325px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #3b82f6;
+  border: 3px solid var(--accent);
   flex-shrink: 0;
 }
 
