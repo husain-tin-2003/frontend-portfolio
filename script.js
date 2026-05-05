@@ -3,6 +3,68 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Theme toggle (light/dark) ---------- */
+  const THEME_KEY = "theme";
+  const themeToggle = document.getElementById("themeToggle");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  const getInitialTheme = () => {
+    const stored = localStorage.getItem(THEME_KEY);
+    if (stored === "light" || stored === "dark") return stored;
+    // No stored preference: default is dark (per requirement),
+    // but still respect explicit system preference if user has set one.
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      return "dark"; // keep dark as the default per requirement #1
+    }
+    return "dark";
+  };
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    if (themeToggle) {
+      themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+      themeToggle.setAttribute(
+        "aria-label",
+        theme === "dark" ? "Switch to light mode" : "Switch to dark mode",
+      );
+    }
+    if (themeMeta) {
+      themeMeta.setAttribute(
+        "content",
+        theme === "dark" ? "#0d1117" : "#ffffff",
+      );
+    }
+  };
+
+  applyTheme(getInitialTheme());
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current =
+        document.documentElement.getAttribute("data-theme") === "dark"
+          ? "dark"
+          : "light";
+      const next = current === "dark" ? "light" : "dark";
+      applyTheme(next);
+      localStorage.setItem(THEME_KEY, next);
+    });
+  }
+
+  /* React to OS theme changes only when user has not set a preference */
+  if (window.matchMedia) {
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    const onChange = (e) => {
+      if (!localStorage.getItem(THEME_KEY)) {
+        applyTheme(e.matches ? "dark" : "dark"); // default stays dark
+      }
+    };
+    if (mql.addEventListener) mql.addEventListener("change", onChange);
+    else if (mql.addListener) mql.addListener(onChange);
+  }
+
   /* Sticky header shadow on scroll */
   const header = document.getElementById("siteHeader");
   const toggleHeaderShadow = () => {
